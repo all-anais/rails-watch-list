@@ -1,0 +1,11 @@
+<div class="container text-center mt-4">
+  <h1>Add a movie in your list</h1>
+
+  <%= simple_form_for [@list, @bookmark] do |f| %>
+
+    <%= f.input :movie_id, collection: Movie.all, as: :select, label: "Choose a movie to add" %>
+    <%= f.input :comment %>
+
+    <%= f.button :submit, class: 'btn btn-primary' %>
+  <% end %>
+</div>
